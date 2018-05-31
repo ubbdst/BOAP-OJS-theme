@@ -1,0 +1,108 @@
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
+.article-details-issue-identifier {font-family:'Fira Sans', sans-serif;}
+
+.article-summary-title{font-family: 'Fira Sans', sans-serif;}
+
+.page-content, .page-content p { font-size: 1.1rem; }
+
+
+
+/* HEADER and NAV */
+
+.main-header{ background-color: #fff; }
+.main-header .container { max-width:2000px; width:100%; padding: 0 0 0 0; }
+
+#userNav .nav-link,
+.language-toggle .dropdown-toggle {font-size:15px;}
+
+.navbar { background-color:#dedede; }
+#primaryNav { padding: .1rem 0 .1rem 0; max-width:1140px;}
+#primaryNav .dropdown-menu.show { padding: .1rem 0 .1rem 0; background-color: #363636; }
+.navbar-logo { max-width:1140px; clear:both; }
+.navbar-logo a { width:100%; }
+.navbar-logo img { max-height:100px; height:auto; }
+
+.navbar-light .navbar-nav .dropdown-item { color:#fff; }
+
+#primaryNav .nav-link:hover,
+#primaryNav .nav-link:focus { border:1px solid transparent;  }
+#primaryNav .dropdown-item,
+#primaryNav .dropdown-item:hover { font-size:14px; border: 1px solid transparent; }
+
+.article-summary {min-height:160px;}
+.article-summary-pages { min-width:50px; }
+.article-summary-galleys {}
+
+
+
+/* FRONTPAGE STUFF */
+
+.journal-description { max-width:900px; width:100%; margin:0px auto; padding-bottom:30px; }
+
+.cmp_announcements { background-color: #dedede; max-width:940px; margin: 0 auto; padding: 0 20px 40px 20px; }
+.cmp_announcements h2{ font-family:'Fira Sans', sans-serif; font-size:21px; text-transform:uppercase; letter-spacing:1px; color:#666; }
+.announcement-summary h3 a{color:#1c1c1c;}
+article.announcement-summary{margin-top: 30px; padding-top:20px; border-top:1px solid grey;}
+
+/* Media Summary on Frontpage */
+
+.article-summary-pic .cover.media-left {
+	float:left; width:25%; max-height:200px; overflow:hidden; margin-right:15px;
+}
+.article-summary-pic img{ width:100%;}
+.issue-toc-section-title { font-size: 21px; font-weight:bold;}
+
+
+
+/* CONTACT */
+
+.contact-section { text-align:left; }
+
+
+/* ARTICLE STUFF */
+/* license under articles */
+
+.article-summary { margin: 0 0 15px  0; padding: 15px 0 50px 0;  border-bottom: 1px solid lightgrey; }
+.article-details-block.article-details-license p { }
+
+/*DIV*/
+
+.alert-primary {border-color:transparent;}
+.homepage-issue-cover { box-shadow: 0 0 0 #fff; }
+.issue-toc{padding: 0 1% 0 1%;}
+.issue-toc-section, .issue-toc-section + .issue-toc-section { border-top: none; }
+.page-issue-description { text-align: left; }
+.page-issue-description-wrapper,
+.homepage-issue-description-wrapper { background-color: #dedede; }
+
+/* FOOTER */
+
+.site-footer-sidebar { display: none; }
+
+
+
+@media screen and (max-width:1000px) {
+	.navbar-brand img {max-height:50px;}
+}
+
+
+@media screen and (max-width:750px) {
+	/* MEDIA SUMMARY */
+
+	.article-summary-pic{width:45%;}
+	.article-summary-pic .cover.media-left {
+		float:left;width:100%; margin-right:15px; margin-bottom:15px;
+	}
+	.article-summary-pic img{ width:100%;}
+}
+
+@media screen and (max-width:450px) {
+	/* MEDIA SUMMARY */
+
+	.article-summary-pic,
+	.article-summary-pic .cover.media-left {
+		float:left; clear:both; width:100%; margin-right:15px; margin-bottom:15px; max-height:320px;
+	}
+	.article-summary-pic img{ width:100%;}
+}
