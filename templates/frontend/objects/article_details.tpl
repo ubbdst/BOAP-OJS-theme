@@ -169,6 +169,7 @@
 				{/if}
 
 				{* Supplementary galleys *}
+			<!--
 				{if $supplementaryGalleys}
 					<div class="article-details-block article-details-galleys-supplementary">
 						{foreach from=$supplementaryGalleys item=galley}
@@ -178,6 +179,7 @@
 						{/foreach}
 					</div>
 				{/if}
+			-->
 
 				{* Keywords *}
 				{if !empty($keywords[$currentLocale])}

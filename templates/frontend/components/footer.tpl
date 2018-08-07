@@ -7,11 +7,14 @@
  *
  * @brief Common site frontend footer.
  *}
+
 <footer class="site-footer">
+	{*if $sidebar*}
 	<div class="container site-footer-sidebar" role="complementary" aria-label="{translate|escape key="common.navigation.sidebar"}">
 			{call_hook name="Templates::Common::Sidebar"}
 		</div>
 	</div>
+	{*/if*}
 	<div class="container site-footer-content">
 		<div class="row">
 			{if $pageFooter}
@@ -28,8 +31,9 @@
 		</div>
 	</div>
 </footer><!-- pkp_structure_footer_wrapper -->
-<div class="boap-footer" style="width:100%; margin:0 auto; text-align:center; padding: 10px 0 10px 0; background-color:#666;">
-	Bergen Open Access Publishing
+
+<div class="boap-cred" style="font-family:Georgia; text-transform:uppercase; font-style:italic;">
+	<a href="https://boap.uib.no" target="_blank">Bergen Open Access Publishing</a>
 </div>
 
 {* Load author biography modals if they exist *}
@@ -41,16 +45,16 @@
 
 {* Login modal *}
 <div id="loginModal" class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
+	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+      		<div class="modal-body">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 				{include file="frontend/components/loginForm.tpl"}
-      </div>
-    </div>
-  </div>
+			</div>
+		</div>
+	</div>
 </div>
 
 {load_script context="frontend" scripts=$scripts}

@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
 /* HEADER and NAV */
 
 .main-header{ background-color: #fff; }
-.main-header .container { max-width:2000px; width:100%; padding: 0 0 0 0; }
+.main-header .container { max-width:6000px; width:100%; padding: 0 0 0 0; }
 
 #userNav .nav-link,
 .language-toggle .dropdown-toggle {font-size:15px;}
@@ -20,7 +20,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
 #primaryNav { padding: .1rem 0 .1rem 0; max-width:1140px;}
 #primaryNav .dropdown-menu.show { padding: .1rem 0 .1rem 0; background-color: #363636; }
 .navbar-logo { max-width:1140px; clear:both; }
-.navbar-logo a { width:100%; }
+.navbar-logo-text{font-family:"Fira Sans", sans-serif;}
+.navbar-logo a { width:100%;}
 .navbar-logo img { max-height:100px; height:auto; }
 
 .navbar-light .navbar-nav .dropdown-item { color:#fff; }
@@ -34,6 +35,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
 .article-summary-pages { min-width:50px; }
 .article-summary-galleys {}
 
+.modal.fade.show {padding-top:20px;}
 
 
 /* FRONTPAGE STUFF */
@@ -78,8 +80,15 @@ article.announcement-summary{margin-top: 30px; padding-top:20px; border-top:1px 
 
 /* FOOTER */
 
-.site-footer-sidebar { display: none; }
+/*.site-footer-sidebar { display: none; }*/
+.site-footer-sidebar {font-size:14px; }
+.site-footer-sidebar .title { font-size:18px; }
+/*BOAP-cred*/
+.boap-cred{ width:100%; text-align:center; padding: 10px 0 10px 0; background-color: #666;  }
+.boap-cred a{ color: #fff; text-decoration:none;}
+.boap-cred a:hover {color: #fff; text-decoration:underline;
 
+}
 
 
 @media screen and (max-width:1000px) {
