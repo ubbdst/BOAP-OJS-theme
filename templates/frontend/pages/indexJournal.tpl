@@ -18,12 +18,13 @@
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
+{**
 {if $homepageImage}
 	<div class="homepage-image{if $issue} homepage-image-behind-issue{/if}">
 		<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" alt="{$homepageImageAltText|escape}">
 	</div>
 {/if}
-
+**}
 <div class="container container-homepage-issue">
 	{**
 	<div class="container about-journal" role="complementary" aria-label="{translate|escape key="common.navigation.sidebar"}">
@@ -63,7 +64,7 @@
 			{/foreach}
 		</div>
 	</section>
-{/if}
+    {/if}
 
 {if $issue}
 		<h2 class="h5 homepage-issue-current">

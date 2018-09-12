@@ -6,6 +6,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
 
 .page-content, .page-content p { font-size: 1.1rem; }
 
+.submissions-checklist {font-size: 1.1rem;}
 
 
 /* HEADER and NAV */
@@ -49,12 +50,16 @@ article.announcement-summary{margin-top: 30px; padding-top:20px; border-top:1px 
 
 /* Media Summary on Frontpage */
 
+.article-summary {overflow: hidden;}
 .article-summary-pic .cover.media-left {
-	float:left; width:25%; max-height:200px; overflow:hidden; margin-right:15px;
+	float:left; width:150px; height:150px; overflow:hidden; margin-right:15px;
 }
 .article-summary-pic img{ width:100%;}
 .issue-toc-section-title { font-size: 21px; font-weight:bold;}
 
+/*Article summary galleys*/
+
+/*.article-summary-galleys {margin-top: 0; visibility: hidden;}*/
 
 
 /* CONTACT */
@@ -66,7 +71,11 @@ article.announcement-summary{margin-top: 30px; padding-top:20px; border-top:1px 
 /* license under articles */
 
 .article-summary { margin: 0 0 15px  0; padding: 15px 0 50px 0;  border-bottom: 1px solid lightgrey; }
-.article-details-block.article-details-license p { }
+.article-details-block.article-details-license p+p {display: none; }
+
+/*article-details*/
+.article-details-issue-section {margin-bottom: 1em;}
+
 
 /*DIV*/
 
@@ -99,7 +108,7 @@ article.announcement-summary{margin-top: 30px; padding-top:20px; border-top:1px 
 @media screen and (max-width:750px) {
 	/* MEDIA SUMMARY */
 
-	.article-summary-pic{width:45%;}
+	.article-summary-pic {width: 25%;}
 	.article-summary-pic .cover.media-left {
 		float:left;width:100%; margin-right:15px; margin-bottom:15px;
 	}
@@ -109,7 +118,7 @@ article.announcement-summary{margin-top: 30px; padding-top:20px; border-top:1px 
 @media screen and (max-width:450px) {
 	/* MEDIA SUMMARY */
 
-	.article-summary-pic,
+	.article-summary-pic {width: 25%;}
 	.article-summary-pic .cover.media-left {
 		float:left; clear:both; width:100%; margin-right:15px; margin-bottom:15px; max-height:320px;
 	}
