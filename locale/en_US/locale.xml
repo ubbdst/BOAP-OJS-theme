@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/themes/boap/locale/en_US/locale.xml
+  *
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.themes.boap.option.supplements.label">Supplements</message>
+	<message key="plugins.themes.boap.option.supplements.hide">Hide supplements.</message>
+	<message key="plugins.themes.boap.option.supplements.show">Show supplements.</message>
+</locale>

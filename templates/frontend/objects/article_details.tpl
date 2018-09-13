@@ -186,7 +186,7 @@
 				{/if}
 
 				{* Supplementary galleys *}
-				{if $supplementaryGalleys}
+				{if $showSupplements && $supplementaryGalleys}
 					<div class="article-details-block article-details-galleys-supplementary">
 						<h2 class="article-details-heading">{translate key="plugins.themes.healthSciences.article.supplementaryFiles"}</h2>
 						{foreach from=$supplementaryGalleys item=galley}
@@ -355,7 +355,7 @@
 					{/if}
 					{$copyright}
 					</div>
-				{/if} 
+				{/if}
 
 				{call_hook name="Templates::Article::Main"}
 

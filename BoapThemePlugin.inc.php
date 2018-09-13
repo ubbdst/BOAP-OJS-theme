@@ -11,6 +11,17 @@ class BoapThemePlugin extends ThemePlugin {
         $this->setParent('healthsciencesthemeplugin');
         //$this->modifyStyle('stylesheet', array('addLess' => array('styles/index.less')));
         $this->addStyle('child-stylesheet', 'styles/index.less');
+
+		$this->addOption('showSupplements', 'radio', array(
+					   'label' => 'plugins.themes.boap.option.supplements.label',
+					   'default' => False,
+					   'options' => array(
+							False => 'plugins.themes.boap.option.supplements.hide',
+							True => 'plugins.themes.boap.option.supplements.show',
+                       )
+	    ));
+		// Get extra data for templates
+		HookRegistry::register ('TemplateManager::display', array($this, 'loadTemplateData'));
     }
 
     /**
@@ -28,4 +39,10 @@ class BoapThemePlugin extends ThemePlugin {
     function getDescription() {
         return 'BOAP Theme.';
     }
+
+	public function loadTemplateData($hookName, $args) {
+		$templateMgr = $args[0];
+		$showSupplements = $this->getOption('showSupplements');
+		$templateMgr->assign('showSupplements', $showSupplements);
+	}
 }
