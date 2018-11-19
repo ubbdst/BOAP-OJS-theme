@@ -37,10 +37,8 @@
 </div>
 
 {* Load author biography modals if they exist *}
-{if $smarty.capture.authorBiographyModals|@count}
-	{foreach from=$smarty.capture.authorBiographyModals item="modal"}
-		{$modal}
-	{/foreach}
+{if !empty($smarty.capture.authorBiographyModals|trim)}
+	{$smarty.capture.authorBiographyModals}
 {/if}
 
 {* Login modal *}
@@ -51,7 +49,7 @@
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				{include file="frontend/components/loginForm.tpl"}
+				{include file="frontend/components/loginForm.tpl" formType = "loginModal"}
 			</div>
 		</div>
 	</div>

@@ -49,7 +49,6 @@
 				{$article->getLocalizedFullTitle()|escape}
 			</h1>
 
-
 			{if $article->getAuthors()}
 				<ul class="authors-string">
 					{foreach from=$article->getAuthors() item=authorString key=authorStringKey}
@@ -89,36 +88,7 @@
 								</div>
 							{/if}
 							{if $author->getLocalizedBiography()}
-								<button type="button" class="article-details-bio-toggle" data-toggle="modal" data-target="#authorBiographyModal{$smarty.foreach.authorLoop.index}">
-									{translate key="plugins.themes.healthSciences.article.authorBio"}
-								</button>
-								{* Store author biographies to print as modals in the footer *}
-								{capture append="authorBiographyModalsTemp"}
-									<div
-											class="modal fade"
-											id="authorBiographyModal{$smarty.foreach.authorLoop.index}"
-											tabindex="-1"
-											role="dialog"
-											aria-labelledby="authorBiographyModalTitle{$smarty.foreach.authorLoop.index}"
-											aria-hidden="true"
-									>
-										<div class="modal-dialog" role="document">
-											<div class="modal-content">
-												<div class="modal-header">
-													<div class="modal-title" id="authorBiographyModalTitle{$smarty.foreach.authorLoop.index}">
-														{$author->getFullName()|escape}
-													</div>
-													<button type="button" class="close" data-dismiss="modal" aria-label="{translate|escape key="common.close"}">
-														<span aria-hidden="true">&times;</span>
-													</button>
-												</div>
-												<div class="modal-body">
-													{$author->getLocalizedBiography()}
-												</div>
-											</div>
-										</div>
-									</div>
-								{/capture}
+								<div class="article-details-author-bio">{$author->getLocalizedBiography()}</div>
 							{/if}
 						</div>
 					{/foreach}
